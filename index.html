@@ -5,45 +5,81 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bevin Benny — Portfolio</title>
   <style>
-    body{font-family: system-ui,Segoe UI,Roboto, sans-serif; max-width:900px;margin:40px auto;padding:0 20px;line-height:1.6}
-    header{border-bottom:1px solid #ddd;padding-bottom:10px;margin-bottom:20px}
-    h1{margin:0}
-    .grid{display:flex;gap:20px;flex-wrap:wrap}
-    .card{flex:1;min-width:240px;border:1px solid #eee;padding:16px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.03)}
-    footer{margin-top:30px;color:#666;font-size:0.9rem}
+    body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;max-width:1000px;margin:40px auto;padding:0 20px;line-height:1.6;color:#111;background:#fff}
+    header{border-bottom:1px solid #e6e6e6;padding-bottom:12px;margin-bottom:22px}
+    h1{margin:0;font-size:2rem}
+    h2{margin-top:0.6rem}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px}
+    .card{background:#fafafa;border:1px solid #eee;padding:18px;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+    .skills ul{columns:2;list-style:disc;margin:0;padding-left:20px}
+    footer{margin-top:28px;color:#555;font-size:0.95rem;border-top:1px solid #eee;padding-top:12px}
+    a{color:#0b66c3;text-decoration:none}
+    @media(max-width:820px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <header>
     <h1>Bevin Benny</h1>
-    <p>Email: <a href="mailto:bevinbenny65785@gmail.com">bevinbenny65785@gmail.com</a></p>
-    <p>University of South Wales, Treforest</p>
+    <p>Email: <a href="mailto:bevinbenny65785@gmail.com">bevinbenny65785@gmail.com</a> · University of South Wales, Treforest</p>
+    <p style="margin:6px 0 0;font-size:0.95rem;color:#666">Home: Thulaparamban House, Kormala Kuttichira, Thrissur, India PO 680824 · UK: 23a Pen-Y-Lan Rd, Cardiff CF24 3PG</p>
   </header>
 
-  <section class="grid">
-    <div class="card">
+  <main class="grid">
+    <section class="card">
       <h2>About Me</h2>
-      <p>Currently studying computing at the University of South Wales. Previously at St Sebastian HSS, Kuttikad.</p>
-    </div>
+      <p>
+        I am an enthusiastic and motivated learner who completed my 12th standard in India, graduating in March 2024 with Computer Science as my core subject. My academic background has given me a strong foundation in programming logic, problem-solving, and analytical thinking. Along the way, I developed hands-on skills in C++, JavaScript, SQL, and Python, which I continue to refine through personal projects, online courses, and practical experimentation.
+      </p>
+      <p>
+        I am particularly passionate about how technology can create smarter and more efficient solutions in everyday life. This interest drives me to explore areas such as web development, database management, and automation. I enjoy taking up new challenges, learning independently, and staying updated with emerging tools and trends in the digital world.
+      </p>
+      <p>
+        Beyond academics, I am a proactive individual who believes in continuous improvement and teamwork. I value discipline, creativity, and a growth-oriented mindset. My long-term goal is to build a career in the tech domain where I can apply my skills to real-world problems, contribute to meaningful projects, and grow as a professional.
+      </p>
+      <p>
+        Overall, I aim to combine my technical abilities and curiosity to pursue opportunities that help me learn, innovate, and make a positive impact.
+      </p>
 
-    <div class="card">
+      <h2 style="margin-top:18px">Projects</h2>
+      <p><strong>Portfolio starter</strong> — This site (hosted on GitHub Pages). I am adding more projects and links to repositories as I build them.</p>
+    </section>
+
+    <aside class="card">
       <h2>Skills</h2>
-      <ul>
-        <li>HTML & CSS</li>
-        <li>Basic JavaScript</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </div>
 
-    <div class="card">
-      <h2>Projects</h2>
-      <p><strong>Portfolio starter</strong> — This site (hosted on GitHub Pages). Add links to other repos as you create them.</p>
-    </div>
-  </section>
+      <div class="skills">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li><strong>C++</strong> – Object-oriented programming, logic building</li>
+          <li><strong>Python</strong> – Basic scripting, automation, data handling</li>
+          <li><strong>JavaScript</strong> – Web interactivity, DOM manipulation</li>
+          <li><strong>SQL</strong> – Database queries, data retrieval and management</li>
+          <li><strong>HTML &amp; CSS</strong> – Basic web page structure and styling</li>
+          <li><strong>Version Control</strong> – Git &amp; GitHub</li>
+          <li><strong>Problem-Solving</strong> &amp; Debugging</li>
+        </ul>
+
+        <h3 style="margin-top:12px">Soft Skills</h3>
+        <ul>
+          <li>Analytical Thinking</li>
+          <li>Quick Learner &amp; Adaptable</li>
+          <li>Time Management</li>
+          <li>Communication Skills</li>
+          <li>Teamwork &amp; Collaboration</li>
+          <li>Attention to Detail</li>
+          <li>Creative Approach to Problem-Solving</li>
+        </ul>
+      </div>
+
+      <h3 style="margin-top:14px">Contact</h3>
+      <p style="margin:0.2rem 0"><a href="mailto:bevinbenny65785@gmail.com">bevinbenny65785@gmail.com</a></p>
+      <p style="margin:0.2rem 0">University of South Wales, Treforest</p>
+    </aside>
+  </main>
 
   <footer>
-    <p>Home: Thulaparamban House, Kormala Kuttichira, Thrissur, India PO 680824</p>
-    <p>UK: 23a Pen-Y-Lan Rd, Cardiff CF24 3PG</p>
+    <p>St Sebastian HSS, Kuttikad · Thrissur, India</p>
+    <p>© Bevin Benny — <small>Portfolio hosted via GitHub Pages</small></p>
   </footer>
 </body>
 </html>
