@@ -18,7 +18,7 @@ Beyond academics, I am a proactive individual who believes in continuous improve
 ---
 
 ## What I am doing
-- MSc / coursework and portfolio development — University of South Wales, Treforest  
+- BSc / coursework and portfolio development — University of South Wales, Treforest  
 - Building small web projects, database practice apps, and learning automation  
 - Maintaining this portfolio and documenting projects on GitHub
 
@@ -66,4 +66,5 @@ Beyond academics, I am a proactive individual who believes in continuous improve
 ---
 
 > **Tip for markers:** You can find a downloadable CV at `/CV.pdf` in this repository and live project demos linked in the Projects section.
+
 
