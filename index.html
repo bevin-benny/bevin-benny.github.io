@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bevin Benny — Portfolio</title>
-  <meta name="description" content="Portfolio of Bevin Benny — BSc student at University of South Wales. Skills: C++, Python, JavaScript, SQL, HTML/CSS. Contact: +447352679512" />
+  <meta name="description" content="Portfolio of Bevin Benny — BSc (Hons) Student at University of South Wales. Skills: C++, Python, JavaScript, SQL, HTML/CSS. Contact: +447352679512" />
   <style>
     :root{
       --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#2dd4bf; --accent-2:#60a5fa;
@@ -21,8 +21,6 @@
         radial-gradient(1200px 600px at 10% 10%, rgba(96,165,250,0.06), transparent 6%),
         radial-gradient(800px 400px at 90% 90%, rgba(45,212,191,0.04), transparent 10%),
         linear-gradient(180deg,#041025 0%, #071126 100%);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       padding:32px 20px;
       display:flex;
       justify-content:center;
@@ -30,62 +28,89 @@
     .wrap{max-width:var(--max); width:100%;}
     header{display:flex;gap:20px;align-items:center;margin-bottom:22px}
     .avatar{
-      width:92px;height:92px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      display:flex;align-items:center;justify-content:center;font-weight:700;color:#032; font-size:26px; box-shadow:0 6px 18px rgba(2,6,23,0.6);
+      width:92px;height:92px;border-radius:16px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:#032;font-size:26px;
     }
     h1{margin:0;font-size:1.6rem}
     .sub{color:var(--muted);margin-top:6px;font-size:0.92rem}
 
+    .tag{
+      display:inline-block;padding:6px 8px;border-radius:999px;
+      background:rgba(255,255,255,0.03);font-size:0.82rem;color:var(--muted);
+      margin-right:8px;margin-bottom:8px;
+    }
+
     .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
     @media(max-width:880px){.grid{grid-template-columns:1fr}}
 
-    .card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:18px; box-shadow:0 6px 24px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.03)}
-    .card h2{margin:0 0 10px 0;font-size:1.05rem}
-    p{color:#cfe3f7;margin:0 0 12px 0;line-height:1.5;font-size:0.96rem}
+    .card{
+      background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));
+      border-radius:var(--radius); padding:18px;
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow:0 6px 24px rgba(2,6,23,0.6);
+      opacity:0; transform:translateY(10px);
+      animation:fadeIn .6s forwards ease;
+    }
+    @keyframes fadeIn{to{opacity:1;transform:none}}
 
-    /* Contact */
-    .contact{display:flex;flex-direction:column; gap:8px}
+    p{
+      color:#cfe3f7;margin:0 0 12px 0;
+      line-height:1.5;font-size:0.96rem
+    }
+
     .btn{
-      display:inline-flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:var(--glass); color:#eaf6f5;text-decoration:none;border:1px solid rgba(255,255,255,0.03);
+      display:inline-flex;align-items:center;gap:10px;padding:10px 12px;
+      border-radius:10px;background:var(--glass);
+      color:#eaf6f5;text-decoration:none;
+      border:1px solid rgba(255,255,255,0.03);
       transition:transform .18s ease, box-shadow .18s ease;
     }
     .btn:hover{transform:translateY(-4px); box-shadow:0 12px 36px rgba(15,23,36,0.6);}
-    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#042; font-weight:600; border:none}
+    .btn.primary{
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#042;font-weight:600;border:none
+    }
 
-    /* Skills */
     .skill{margin-bottom:12px}
     .skill label{display:flex;justify-content:space-between;font-size:0.9rem;color:var(--muted)}
-    .bar{height:10px;background:rgba(255,255,255,0.05);border-radius:999px;margin-top:6px;overflow:hidden}
-    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2)); border-radius:999px; transform-origin:left; transition:width .8s cubic-bezier(.2,.9,.3,1)}
-    .tag{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:0.82rem;color:var(--muted);margin-right:8px;margin-bottom:8px}
+    .bar{
+      height:10px;background:rgba(255,255,255,0.05);
+      border-radius:999px;margin-top:6px;overflow:hidden
+    }
+    .bar > i{
+      display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      border-radius:999px;
+    }
 
-    /* Projects */
     .projects{display:grid;gap:12px}
-    .project{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
-    .p-thumb{width:72px;height:54px;border-radius:8px;background:linear-gradient(135deg,#60a5fa,#2dd4bf);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042}
-    .p-body h3{margin:0;font-size:1rem}
-    .p-body p{margin:6px 0 0 0;color:var(--muted);font-size:0.9rem}
-
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.86rem}
-
-    /* small animation on load */
-    .card, .avatar{opacity:0; transform:translateY(10px); animation:fadeIn .5s forwards}
-    .avatar{animation-delay:.05s} .card{animation-delay:.15s}
-    @keyframes fadeIn{to{opacity:1; transform:none}}
-
-    /* resume link small */
-    .cv{display:flex;gap:8px;align-items:center;margin-top:10px}
-    .small{font-size:0.9rem;color:var(--muted)}
-
+    .project{
+      display:flex;gap:12px;align-items:flex-start;
+      padding:12px;border-radius:10px;
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.02)
+    }
+    .p-thumb{
+      width:72px;height:54px;border-radius:8px;
+      background:linear-gradient(135deg,#60a5fa,#2dd4bf);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:#042
+    }
+    footer{
+      margin-top:18px;text-align:center;color:var(--muted);
+      font-size:0.86rem
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
+
     <header>
       <div class="avatar">BB</div>
       <div>
         <h1>Bevin Benny</h1>
-        <div class="sub">MSc Student — University of South Wales, Treforest · Aspiring Software Developer</div>
+        <div class="sub">BSc (Hons) Student — University of South Wales, Treforest · Aspiring Software Developer</div>
         <div style="margin-top:8px">
           <span class="tag">C++</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span>
         </div>
@@ -93,7 +118,8 @@
     </header>
 
     <div class="grid">
-      <!-- main column -->
+
+      <!-- Main Section -->
       <main class="card">
         <h2>About Me</h2>
         <p>
@@ -103,77 +129,78 @@
           I am particularly passionate about how technology can create smarter and more efficient solutions in everyday life. This interest drives me to explore areas such as web development, database management, and automation. I enjoy taking up new challenges, learning independently, and staying updated with emerging tools and trends in the digital world.
         </p>
         <p>
-          Beyond academics, I am a proactive individual who believes in continuous improvement and teamwork. I value discipline, creativity, and a growth-oriented mindset. My long-term goal is to build a career in the tech domain where I can apply my skills to real-world problems, contribute to meaningful projects, and grow as a professional.
+          My long-term goal is to build a career in the tech domain where I can apply my skills to real-world problems, contribute to meaningful projects, and grow as a professional.
         </p>
 
         <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
-          <a class="btn primary" href="/CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+          <a class="btn primary" href="/CV.pdf" target="_blank">Download CV (PDF)</a>
           <a class="btn" href="mailto:bevinbenny65785@gmail.com">✉ Email</a>
           <a class="btn" href="tel:+447352679512">📞 +44 7352 679512</a>
         </div>
 
-        <h2 style="margin-top:18px">Selected Projects</h2>
+        <h2 style="margin-top:18px">Projects</h2>
         <div class="projects">
           <div class="project">
             <div class="p-thumb">P1</div>
-            <div class="p-body">
+            <div>
               <h3>Portfolio Starter</h3>
-              <p>Simple GitHub Pages site to host resume, projects and contact details. Shows use of Git and version control.</p>
+              <p>A GitHub Pages site demonstrating HTML, CSS, and version control.</p>
             </div>
           </div>
 
           <div class="project">
             <div class="p-thumb">DB</div>
-            <div class="p-body">
-              <h3>Mini Database App</h3>
-              <p>Practice app demonstrating SQL queries, data retrieval and basic CRUD operations (personal project).</p>
+            <div>
+              <h3>Mini SQL Database App</h3>
+              <p>Practice CRUD operations, SQL queries, and data management.</p>
             </div>
           </div>
         </div>
-
       </main>
 
-      <!-- side column -->
+      <!-- Sidebar -->
       <aside class="card">
         <h2>Skills & Tools</h2>
 
         <div class="skill"><label>C++ <span>75%</span></label>
           <div class="bar"><i style="width:75%"></i></div>
         </div>
+
         <div class="skill"><label>Python <span>65%</span></label>
           <div class="bar"><i style="width:65%"></i></div>
         </div>
+
         <div class="skill"><label>JavaScript <span>60%</span></label>
           <div class="bar"><i style="width:60%"></i></div>
         </div>
+
         <div class="skill"><label>SQL <span>60%</span></label>
           <div class="bar"><i style="width:60%"></i></div>
         </div>
+
         <div class="skill"><label>HTML & CSS <span>70%</span></label>
           <div class="bar"><i style="width:70%"></i></div>
         </div>
 
         <h3 style="margin-top:14px">Soft Skills</h3>
-        <p class="small">Analytical thinking · Quick learner · Time management · Communication · Teamwork · Attention to detail · Creative problem solving</p>
+        <p>Analytical Thinking · Communication · Teamwork · Attention to Detail · Creativity · Adaptability</p>
 
         <h3 style="margin-top:12px">Contact</h3>
-        <div class="contact">
-          <div class="small">Email: <a href="mailto:bevinbenny65785@gmail.com">bevinbenny65785@gmail.com</a></div>
-          <div class="small">Phone: <a href="tel:+447352679512">+44 7352 679512</a></div>
-          <div class="small">Home: Thulaparamban House, Kormala Kuttichira, Thrissur, India PO 680824</div>
-          <div class="small">UK: 23a Pen-Y-Lan Rd, Cardiff CF24 3PG</div>
-        </div>
+        <p>Email: <a href="mailto:bevinbenny65785@gmail.com">bevinbenny65785@gmail.com</a></p>
+        <p>Phone: <a href="tel:+447352679512">+44 7352 679512</a></p>
+        <p>India: Thrissur · UK: Cardiff</p>
 
         <div style="margin-top:12px">
-          <a class="btn" href="https://github.com/bevin-benny" target="_blank" rel="noopener">View GitHub Profile</a>
+          <a class="btn" href="https://github.com/bevin-benny" target="_blank">View GitHub Profile</a>
         </div>
       </aside>
+
     </div>
 
     <footer>
-      <div class="small">St Sebastian HSS, Kuttikad · © Bevin Benny — Portfolio hosted via GitHub Pages</div>
+      <div>St Sebastian HSS, Kuttikad · © Bevin Benny — Portfolio hosted via GitHub Pages</div>
     </footer>
+
   </div>
 </body>
 </html>
-
